@@ -1,0 +1,30 @@
+<main>
+    <div class="form">
+      <input
+        type="text"
+        placeholder="Top text"
+        class="form--input"
+        name="topText"
+        [(ngModel)]="meme.topText"
+      />
+      <input
+        type="text"
+        placeholder="Bottom text"
+        class="form--input"
+        name="bottomText"
+        [(ngModel)]="meme.bottomText"
+      />
+      <button
+        class="form--button"
+        (click)="getMemeImage()"
+      >
+        Get a new meme image 🖼
+      </button>
+    </div>
+    <div class="meme">
+      <img src="{{meme.randomImage}}" class="meme--image" />
+      <h2 class="meme--text top">{{meme.topText}}</h2>
+      <h2 class="meme--text bottom">{{meme.bottomText}}</h2>
+    </div>
+  </main>
+  
